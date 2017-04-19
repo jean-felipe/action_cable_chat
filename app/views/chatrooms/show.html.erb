@@ -1,9 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Chatroom:</strong>
   <%= @chatroom.name %>
 </p>
+<div data-behavior='messages' data-chatroom-id='<%= @chatroom.id %>'>
+  <% @chatroom.messages.each do |message|%>
+    <%= render message %>
+  <% end %>
+</div>
 
-<%= link_to 'Edit', edit_chatroom_path(@chatroom) %> |
-<%= link_to 'Back', chatrooms_path %>
+<%= simple_form_for [@chatroom, Message.new], remote: true do |f| %>
+  <%= f.input :body, class: "form-control", autofocus: true %>
+<% end %>

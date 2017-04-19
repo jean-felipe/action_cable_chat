@@ -1,0 +1,5 @@
+<div class='message-card'>
+  <div class='header pull-right'><%= message.created_at.try(:strftime, "%d/%m/%Y %H:%M:%S") %></div>
+  <strong><%= message.user.username %>:</strong>
+  <p><%= message.body %></p>
+</div>
