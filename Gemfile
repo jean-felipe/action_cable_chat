@@ -36,12 +36,16 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-bootstrapped', '~> 0.1.1'
 gem 'simple_form'
+gem 'enumerize'
+gem 'annotate'
+gem 'angularjs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
