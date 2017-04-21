@@ -10,6 +10,9 @@
 
 require 'rails_helper'
 
-RSpec.describe Chatroom, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Chatroom do
+	it{should have_many :chatroom_users}
+	it{should have_many :users}
+	it{should have_many :messages}
+
 end
