@@ -29,7 +29,7 @@ class ChatroomsController < ApplicationController
 
     respond_to do |format|
       if @chatroom.save
-        format.html { redirect_to @chatroom, notice: 'Chatroom was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Chatroom was successfully created.' }
         format.json { render :show, status: :created, location: @chatroom }
       else
         format.html { render :new }

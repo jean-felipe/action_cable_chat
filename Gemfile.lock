@@ -38,13 +38,16 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    angularjs-rails (1.6.2)
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (7.1.4)
     autoprefixer-rails (6.7.7.2)
       execjs
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -61,6 +64,7 @@ GEM
     coffee-script-source (1.12.2)
     commonjs (0.2.7)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     devise (4.2.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -79,6 +83,8 @@ GEM
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
@@ -150,6 +156,12 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    react-rails (2.0.2)
+      babel-transpiler (>= 0.7.0)
+      connection_pool
+      execjs
+      railties (>= 3.2)
+      tilt
     redis (3.3.3)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -225,7 +237,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angularjs-rails
   annotate
   bootstrap-sass
   coffee-rails (~> 4.2)
@@ -233,6 +244,7 @@ DEPENDENCIES
   devise-bootstrapped (~> 0.1.1)
   enumerize
   factory_girl_rails
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -240,6 +252,7 @@ DEPENDENCIES
   pry
   puma (~> 3.0)
   rails (~> 5.0.2)
+  react-rails
   redis (~> 3.0)
   rspec-rails
   sass-rails (~> 5.0)

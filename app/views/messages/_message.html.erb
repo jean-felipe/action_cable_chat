@@ -1,5 +1,28 @@
-<div class='message-card'>
-  <div class='header pull-right'><%= message.creation %></div>
-  <strong><%= message.user.username %>:(<%= message.user.dialects %>)</strong>
-  <p><%= message.body %></p>
-</div>
+
+
+<% if message.user.dialects == "smurf" %>
+	<div class='message-card-smurf'>
+    <div class='header pull-right'><%= message.creation %></div>
+       <strong><%= message.user.username.capitalize! %>:(<%= message.user.dialects %>)</strong>
+       <p><%= message.body %></p>
+   </div>
+   <% elsif message.user.dialects == "yoda" %>
+   	<div class='message-card-yoda'>
+      <div class='header pull-right'><%= message.creation %></div>
+       <strong><%= message.user.username.capitalize! %>:(<%= message.user.dialects %>)</strong>
+       <p><%= message.body %></p>
+   </div>
+   <% elsif message.user.dialects == "valley_girl" %>
+   <div class='message-card-girl'>
+      <div class='header pull-right'><%= message.creation %></div>
+       <strong><%= message.user.username.capitalize! %>:(<%= message.user.dialects %>)</strong>
+       <p><%= message.body %></p>
+   </div>
+
+   <% elsif message.user.dialects == "pig_latin" %>
+		<div class='message-card-pig'>
+      <div class='header pull-right'><%= message.creation %></div>
+       <strong><%= message.user.username.capitalize! %>:(<%= message.user.dialects %>)</strong>
+       <p><%= message.body %></p>
+   </div>
+<% end %>
