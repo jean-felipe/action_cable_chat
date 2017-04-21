@@ -17,7 +17,6 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  dialects               :integer
-#  online                 :boolean          default("false")
 #
 # Indexes
 #
