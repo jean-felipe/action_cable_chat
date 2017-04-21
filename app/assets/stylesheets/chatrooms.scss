@@ -1,3 +1,21 @@
 // Place all the styles related to the Chatrooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.messages-panel{
+	max-height: 400px;
+  overflow-y: scroll;
+}
+
+.chatrooms-panel{
+  height: auto;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 19px;
+  margin-bottom: 10px;
+}
+
+ul{
+	list-style-type: none;
+}

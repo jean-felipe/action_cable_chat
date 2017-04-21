@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   root to: 'chatrooms#index'
 
-  mount ActionCable.server => '/cable'tml
+  mount ActionCable.server => '/cable'
 end
