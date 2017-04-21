@@ -11,5 +11,5 @@
 </div>
 
 <%= simple_form_for [@chatroom, Message.new], remote: true do |f| %>
-  <%= f.input :body, class: "form-control", autofocus: true %>
+  <%= f.input :body, class: "form-control", autofocus: true, label: false, placeholder: 'type message here' %>
 <% end %>

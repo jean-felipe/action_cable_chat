@@ -49,11 +49,12 @@
         <% if user_signed_in? %>
           <div class="col-sm-2 chatrooms-panel">
             
-              <h5>Chatrooms</h5>
+              <h5>Chatrooms</h5>  
               <ul>
                 <% current_user.chatrooms.each do |chatroom| %>
                   <li><%= link_to chatroom.name, chatroom, data: { behavior: "chatroom-link", chatroom_id: chatroom.id} %></li>
                 <% end %>
+                <li><%= link_to "All chats", root_path %></li>
               </ul>
             <hr>
             <h5>Online</h5>
