@@ -8,11 +8,15 @@ class User::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
+    current_user.online = true
+    current_user.save!
     super
   end
 
   # DELETE /resource/sign_out
   def destroy
+    current_user.online = false
+    current_user.save!
     super
   end
 
